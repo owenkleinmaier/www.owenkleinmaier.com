@@ -1,20 +1,83 @@
+import { useState, useEffect } from "react";
+import { Moon, Sun } from "@phosphor-icons/react";
+
 const Header: React.FC = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleToggle = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDarkMode]);
+
   return (
-    <header className="flex justify-between p-5">
-      <nav>
-        <ul className="flex space-x-6">
+    <header className="sticky top-0 z-50 w-full flex justify-between items-center p-6 bg-white shadow-lg font-sans dark:bg-gray-800 dark:shadow-lg">
+      <nav className="mx-auto">
+        <ul className="flex space-x-8 text-lg font-7xl">
           <li>
-            <a href="#about">about</a>
+            <a
+              href="#about"
+              className="hover:text-my-blue dark:hover:text-blue-300 dark:text-white"
+            >
+              about
+            </a>
           </li>
           <li>
-            <a href="#skills">skills</a>
+            <a
+              href="#skills"
+              className="hover:text-my-blue dark:hover:text-blue-300 dark:text-white"
+            >
+              skills
+            </a>
           </li>
           <li>
-            <a href="#projects">projects</a>
+            <a
+              href="#projects"
+              className="hover:text-my-blue dark:hover:text-blue-300 dark:text-white"
+            >
+              projects
+            </a>
           </li>
         </ul>
       </nav>
-      <button className="text-xl">🌙</button>
+      {isDarkMode ? (
+        <Sun
+          size={28}
+          weight={isHovered ? "fill" : "bold"}
+          onClick={handleToggle}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className={`cursor-pointer transition-transform duration-300 ${
+            isHovered ? "scale-110" : "scale-100"
+          } text-yellow-400 dark:text-yellow-300`}
+        />
+      ) : (
+        <Moon
+          size={28}
+          weight={isHovered ? "fill" : "bold"}
+          onClick={handleToggle}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className={`cursor-pointer transition-transform duration-300 ${
+            isHovered ? "scale-110" : "scale-100"
+          } text-gray-800 dark:text-gray-300`}
+        />
+      )}
     </header>
   );
 };
