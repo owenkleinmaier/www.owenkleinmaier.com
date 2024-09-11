@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Moon, Sun } from "@phosphor-icons/react";
+import { Moon, Sun, House } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -27,6 +28,13 @@ const Header: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full flex justify-between items-center p-6 bg-white shadow-lg font-sans dark:bg-gray-800 dark:shadow-lg">
+      <Link to="/">
+        <House
+          size={28}
+          className="cursor-pointer text-gray-800 dark:text-white hover:scale-110 transition-transform duration-300"
+        />
+      </Link>
+
       <nav className="mx-auto">
         <ul className="flex space-x-8 text-lg font-7xl">
           <li>
