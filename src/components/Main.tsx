@@ -56,7 +56,7 @@ const Main: React.FC = () => {
           {/* Links and Icons */}
           <div className="flex items-center space-x-4 my-4 animate-slidein opacity-0 transition-opacity duration-1000">
             <a
-              href="/Resume"
+              href="/resume"
               className="px-4 py-2 bg-my-blue text-white font-medium rounded-md shadow-md hover:bg-blue-600 transition-colors dark:bg-blue-600 dark:hover:bg-blue-700 text-6xl"
             >
               my resume
