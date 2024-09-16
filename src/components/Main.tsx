@@ -101,11 +101,11 @@ const Main: React.FC = () => {
 
           {/* Typing Animation */}
           <p className="text-7xl text-black dark:text-white animate-slidein opacity-0 transition-opacity duration-1000">
-            i am a{" "}
+            i am {" "}
             <ReactTyped
               strings={[
-                "computer science student. _",
-                "aspiring full-stack developer. _",
+                "a computer science student. _",
+                "an aspiring full-stack developer. _",
               ]}
               typeSpeed={35}
               backSpeed={35}
