@@ -57,7 +57,7 @@ const Main: React.FC = () => {
           <div className="flex items-center space-x-4 my-4 animate-slidein opacity-0 transition-opacity duration-1000">
             <a
               href="/resume"
-              className="px-4 py-2 bg-my-blue text-white font-medium rounded-md shadow-md hover:bg-blue-600 transition-colors dark:bg-blue-600 dark:hover:bg-blue-700 text-6xl"
+              className="px-4 py-2 bg-my-blue text-white font-medium rounded-md shadow-md hover:bg-blue-600 transition-colors text-6xl"
             >
               my resume
             </a>
@@ -122,7 +122,7 @@ const Main: React.FC = () => {
 
         {/* Arrow to beckon scrolling */}
         {showArrow && (
-          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-800 dark:text-white animate-slidein opacity-0">
+          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-800 dark:text-white">
             <CaretDown size={56} />
           </div>
         )}

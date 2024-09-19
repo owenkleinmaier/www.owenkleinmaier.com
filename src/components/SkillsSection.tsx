@@ -43,12 +43,12 @@ const SkillsSection: React.FC = () => {
       id="skills"
       className="py-16 flex justify-center items-center dark:bg-gray-800 text-black dark:text-white w-full px-6 pt-20"
     >
-      <div className="w-full max-w-7xl p-8 dark:bg-gray-700 text-center rounded-3xl shadow-2xl dark:shadow-2xl">
+      <div className="w-full max-w-7xl p-8 dark:bg-gray-700 text-center rounded-3xl shadow-2xl dark:shadow-2xl justify-center">
         <h1 className="text-5xl font-bold mb-8">my skills</h1>
 
         {/* Languages */}
         <h2 className="text-2xl mb-6">languages</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12 justify-center content-center">
           <SkillWidget svgPath={JavaScriptLogo} name="JavaScript" />
           <SkillWidget svgPath={TypeScriptLogo} name="TypeScript" />
           <SkillWidget svgPath={PythonLogo} name="Python" />
@@ -63,7 +63,7 @@ const SkillsSection: React.FC = () => {
 
         {/* Technologies */}
         <h2 className="text-2xl mb-6">technologies & frameworks</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12 justify-center">
           <SkillWidget svgPath={ReactLogo} name="React" />
           <SkillWidget svgPath={NodejsLogo} name="Node.js" />
           <SkillWidget svgPath={FirebaseLogo} name="Firebase" />
@@ -77,7 +77,7 @@ const SkillsSection: React.FC = () => {
 
         {/* Machine Learning & Data Science */}
         <h2 className="text-2xl mb-6">machine learning, ai & data science</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12 justify-center">
           <SkillWidget svgPath={PytorchLogo} name="Pytorch" />
           <SkillWidget svgPath={JupyterLogo} name="Jupyter" />
           <SkillWidget svgPath={RLogo} name="R" />
@@ -90,7 +90,7 @@ const SkillsSection: React.FC = () => {
 
         {/* Tools */}
         <h2 className="text-2xl mb-6">other tools</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-center">
           <SkillWidget svgPath={FigmaLogo} name="Figma" />
           <SkillWidget svgPath={IllustratorLogo} name="Illustrator" />
           <SkillWidget svgPath={PhotoshopLogo} name="Photoshop" />

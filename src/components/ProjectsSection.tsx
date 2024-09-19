@@ -5,24 +5,43 @@ import { CaretLeft } from "@phosphor-icons/react";
 const projects = [
   {
     name: "March Madness Predictor",
-    img: "..assets/img/March-Madness-Predictor.png",
+    img: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Defense.gov_photo_essay_120112-D-VO565-015.jpg",
     description: "This is a detailed description of project one.",
     link: "https://www.kaggle.com/code/owenkleinmaier/march-madness-predictor",
   },
   {
-    name: "Project Two",
-    img: "/path/to/project2.jpg",
+    name: "Easy Bold Reader",
+    img: "https://github.com/owenkleinmaier/EasyBoldReader/blob/main/128-icon.png?raw=true",
     description: "This is a detailed description of project two.",
+    link: "https://github.com/owenkleinmaier/EasyBoldReader",
   },
-  // Add more projects here
+  {
+    name: "Age Calculator",
+    img: "https://raw.githubusercontent.com/owenkleinmaier/age-calculator/597b575b0c4692f0448469766c1464f4da3ef01b/stacked-waves-haikei.svg",
+    description: "This is a detailed description of project Three.",
+    link: "https://github.com/owenkleinmaier/age-calculator",
+  },
+  {
+    name: "Wordle Promposal",
+    img: "https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F263989ba-730a-11ec-89e9-22d3d9c31ba2.jpg?crop=1258%2C838%2C121%2C81",
+    description: "This is a detailed description of project Four.",
+    link: "https://github.com/owenkleinmaier/wordle-clone-promposal",
+  },
+  {
+    name: "My Personal Website",
+    img: "http://localhost:3000/static/media/desk.92791fecd9e8ce4f49c055b4c7d60dd0.svg",
+    description: "This is a detailed description of project Three.",
+    link: "https://github.com/owenkleinmaier/www.owenkleinmaier.com",
+  },
 ];
 
 const ProjectsSection: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
   // Function to handle selecting a project
-  const handleProjectClick = (projectName: string) => {
-    setSelectedProject(projectName);
+  const handleProjectClick = (projectLink: string) => {
+    window.open(projectLink, "_blank");
+    // setSelectedProject(projectName);
   };
 
   // Function to handle going back to the grid
@@ -35,7 +54,7 @@ const ProjectsSection: React.FC = () => {
       id="projects"
       className="py-16 flex justify-center items-center dark:bg-gray-800 text-black dark:text-white w-full px-6 pt-20"
     >
-      <div className="w-full max-w-7xl p-8 dark:bg-gray-700 text-center rounded-3xl shadow-2xl dark:shadow-2xl">
+      <div className="w-full max-w-7xl p-8 text-black dark:text-white dark:bg-gray-700 text-center rounded-3xl shadow-2xl dark:shadow-2xl">
         <h1 className="text-5xl font-bold mb-8">my projects</h1>
 
         {/* Check if a project is selected */}
@@ -76,7 +95,7 @@ const ProjectsSection: React.FC = () => {
               <div
                 key={project.name}
                 className="relative group w-full h-64 rounded-lg overflow-hidden cursor-pointer"
-                onClick={() => handleProjectClick(project.name)}
+                onClick={() => handleProjectClick(project.link)}
               >
                 {/* Wrapper for the blurred background */}
                 <div
